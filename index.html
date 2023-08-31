@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="witdh=device-width, initial-scale=1.0">
+        <title>Website to SMA One Piece</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <header class="header-wrapper" id="home">
+            <div class="logo">
+                <a href="#home"><img class= "img-logo" alt="revou-logo" src="img/logo.jpg"></a>
+            </div>
+            <div class="menu" >
+                <a href="#home"><button>Home</button></a>
+                <a href="#profile"><button>Our Profile</button></a>
+                <a href="#achievement"><button>Achievement</button></a>
+                <a href="#message-us"><button>Message Us</button></a>
+            </div>
+        </header>
+
+        <main id="profile">
+            <form class="nama-form" name="nama-form" onsubmit="return namaForm()">
+                <h1><label id="nama-datang">Halo selamat datang, apa namamu?<input placeholder="nama" name="nama-datang" type="text"><input type="submit" value="enter"></label></h1>
+            </form>
+            
+            <div class="facilitation" onload="showDivs(1)">
+                <img class="img-slideshow" alt="revou-logo1" src="img/img1.jpg" style="display: block;">
+                <img class="img-slideshow" alt="revou-logo2" src="img/img2.jpg">
+                <img class="img-slideshow" alt="revou-logo3" src="img/img3.png">
+                <img class="img-slideshow" alt="revou-logo4" src="img/img4.jpg">
+            </div>
+
+            <div class="img-click">
+                <button onclick="plusDivs(-1)">&#10094;</button>
+                <button onclick="plusDivs(1)">&#10095;</button>
+            </div>
+
+            <p>Fasilitas di SMA One Piece</p>
+            
+            <div id="achievement" class="achievement">
+                <div>
+                    <img  class="img-kegiatan" src="img/img6.jpg" alt="merrygo">
+                    <p style="text-align: left;">Kapal Going Merry</p>
+                </div>
+                <div>
+                    <img class="img-kegiatan" src="img/img5.jpg" alt="thousandsunny">
+                    <p style="text-align: left;">Kapal Thousand Sunny Go</p>
+                </div>
+            </div>
+        </main>
+
+        <footer id="message-us">
+            <h2>Message Us</h2>
+            <div class="form-section" >  
+                <div>
+                    <form class="message-form" name="massage-form" onsubmit="return validationForm()">
+                        First name:<input placeholder="first Name" type="text" name="fName"><br>
+                        Last name:<input placeholder="last Name"type="text"  name="lName"><br>
+                        tanggal lahir:<input type="date" name="birth-date"><br>
+                        Jenis Kelamin:
+                        <input type="radio" id="male" name="gender" value="Pria">
+                        <label for="male">Pria</label>
+                        <input type="radio" id="female" name="gender" value="Wanita">
+                        <label for="female">Wanita</label>
+                        <br>
+                        Pesan :
+                        <textarea placeholder="pesan" name="message"></textarea>
+                        <br>
+                        <input type="submit" value="submit" >
+                    </form>
+                </div>
+                
+                <div class ="message-output">
+                    Current Time : <label id="datetime"></label><br>
+                    Nama : <label id="name"></label><br>
+                    Tanggal lahir : <label id="birth-date"></label><br>
+                    Jenis kelamin : <label id="gender"></label><br>                        
+                    Pesan :<label id="message"></label>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
